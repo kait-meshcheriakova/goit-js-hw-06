@@ -12,6 +12,7 @@ function hendlerSubmit(evt) {
         profile.email = email.value;
         profile.password = password.value;
     }
-   evt.currentTarget.reset();
+    
+   form.reset();
 }
  

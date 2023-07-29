@@ -1,9 +1,21 @@
   
 let inputEl = document.querySelector("#validation-input");
-const inputLenght = inputEl.dataset.length;
+const inputLengh = inputEl.dataset.length;
 
-const input = document.querySelector("input");
-inputEl.addEventListener("blur", (e) => {
-  const text = e.target.value;
-  text.length === +inputLenght ? inputEl.classList.add("valid") : inputEl.classList.add("invalid");
-});
+
+inputEl.addEventListener("blur", borderColorChange) 
+function borderColorChange() {
+  if (inputEl.value.length == inputLengh) {
+    inputEl.classList.add('valid')
+    inputEl.classList.remove('invalid')
+  }
+  else if (inputEl.value.length === 0) {
+    inputEl.classList.remove('invalid')
+    inputEl.classList.remove('valid')
+  }
+  else {
+    inputEl.classList.add('invalid')
+    }
+  
+  
+}
