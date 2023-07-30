@@ -1,11 +1,11 @@
   
 let inputEl = document.querySelector("#validation-input");
-const inputLengh = inputEl.dataset.length;
+const inputLengh = Number(inputEl.dataset.length);
 
 
-inputEl.addEventListener("blur", borderColorChange) 
-function borderColorChange() {
-  if (inputEl.value.length == inputLengh) {
+inputEl.addEventListener("blur", BorderColorDuringValidation) 
+function BorderColorDuringValidation() {
+  if (inputEl.value.length === inputLengh) {
     inputEl.classList.add('valid')
     inputEl.classList.remove('invalid')
   }
